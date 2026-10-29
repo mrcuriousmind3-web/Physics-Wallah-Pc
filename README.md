@@ -1,4 +1,4 @@
-# Physics Wallah for PC
+# Physics Wallah for PC — Unofficial Desktop App\n\n🌐 **Project website:** https://mrcuriousmind3-web.github.io/Physics-Wallah-Pc/\n\n**Discoverability tags:** #PhysicsWallah #PW #PhysicsWallahForPC #PWDesktop #JEE #NEET #StudyWithPW #StudentTools #Linux #WindowsApps #OpenSource
 
 An **unofficial desktop wrapper** that opens the official Physics Wallah website in a dedicated desktop window. It does not copy, host, or redistribute Physics Wallah's website or course content.
 
