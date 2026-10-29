@@ -14,7 +14,7 @@ function isAllowed(url) {
 function createWindow() {
   const win = new BrowserWindow({
     width: 1280, height: 850, minWidth: 900, minHeight: 600,
-    title: 'Physics Wallah', backgroundColor: '#ffffff', autoHideMenuBar: true,
+    title: 'Physics Wallah for PC (Unofficial)', backgroundColor: '#ffffff', autoHideMenuBar: true,\n    icon: path.join(__dirname, 'assets', 'pw-mark.svg'),
     webPreferences: { preload: path.join(__dirname, 'preload.js'), contextIsolation: true, nodeIntegration: false, sandbox: true }
   });
   win.webContents.setWindowOpenHandler(({ url }) => {
