@@ -1,0 +1,57 @@
+{
+  "name": "physics-wallah-pc",
+  "version": "1.0.0",
+  "description": "Unofficial Physics Wallah desktop app for Windows and Linux",
+  "main": "main.js",
+  "author": "MrCurious",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win nsis",
+    "dist:linux": "electron-builder --linux deb"
+  },
+  "devDependencies": {
+    "electron": "^38.2.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.mrcurious.physicswallahpc",
+    "productName": "Physics Wallah",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "Physics-Wallah-Setup-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Physics Wallah"
+    },
+    "linux": {
+      "category": "Education",
+      "target": [
+        {
+          "target": "deb",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "artifactName": "physics-wallah-${version}-${arch}.${ext}"
+    }
+  }
+}
